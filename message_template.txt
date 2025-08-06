@@ -1,0 +1,7 @@
+
+Bonjour {{ nom }},
+
+Votre annonce "{{ titre }}" a retenu mon attention. Seriez-vous ouvert à une discussion ? 
+
+Bien cordialement,
+Yoann

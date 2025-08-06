@@ -1,0 +1,20 @@
+# Sélecteurs CSS pour LeBonCoin
+leboncoin:
+  ads_container: "a[data-testid='adCard']"
+  title: "p[data-testid='adTitle']"
+  price: "span[data-testid='adPrice']"
+  url: null  # Utilise href de l'élément parent
+  location: "span[data-testid='adLocation']"
+  
+# Détection des éléments de protection
+captcha:
+  recaptcha_iframe: "iframe[src*='recaptcha']"
+  cloudflare: ".cf-browser-verification"
+  custom_captcha: "div[class*='captcha']"
+  
+rate_limiting:
+  error_messages:
+    - "trop de requêtes"
+    - "rate limit exceeded"
+    - "429"
+    - "temporairement indisponible"

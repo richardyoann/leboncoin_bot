@@ -1,0 +1,35 @@
+# Configuration principale
+scraping:
+  base_url: "https://www.leboncoin.fr/recherche"
+  max_pages: 5
+  headless: false
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  
+# Gestion des délais
+timing:
+  page_load_timeout: 30
+  element_wait_timeout: 15
+  min_delay_between_requests: 2
+  max_delay_between_requests: 5
+  captcha_wait_timeout: 300  # 5 minutes pour résoudre manuellement
+
+# Limites de sécurité
+limits:
+  max_retries: 3
+  max_captcha_encounters: 5
+  max_consecutive_errors: 10
+
+# Cibles de scraping
+targets:
+  - name: "Informatique"
+    category: "27"
+    keywords: ["ordinateur", "pc portable", "macbook"]
+  - name: "Téléphones"
+    category: "53"
+    keywords: ["iphone", "samsung", "smartphone"]
+
+# Export
+export:
+  formats: ["json", "csv"]
+  output_directory: "results"
+  filename_template: "scraping_{category}_{timestamp}"
